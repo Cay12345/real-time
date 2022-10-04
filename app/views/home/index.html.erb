@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>List User</h3>
+  <table class="table table-bordered mt-5">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.map do |user| %>
+        <tr>
+          <td><%= user.id%></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to "<button class='btn btn-primary'>Chat</button>".html_safe, "#" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
