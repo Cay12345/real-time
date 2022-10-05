@@ -1,0 +1,6 @@
+<% messages.map do |message| %>
+    <div class="box-message">
+      <b><%= message.user.username %></b> : <%= message.content %> <br />
+    </div>
+<% end %>
+
